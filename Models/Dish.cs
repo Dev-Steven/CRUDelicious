@@ -9,10 +9,24 @@
             [Key]
             public int id { get; set; }
             // MySQL VARCHAR and TEXT types can be represeted by a string
+            [Display(Name = "Chef Name:")]
+            [Required]
             public string chef_name { get; set; }
+
+            [Display(Name = "Dish Name:")]
+            [Required]
             public string dish_name { get; set; }
-            public int calories { get; set; }
-            public int tastiness { get; set; }
+
+            [Display(Name = "Calories:")]  
+            [Required]          
+            public int? calories { get; set; }
+
+            [Display(Name = "Tastiness:")] 
+            [Required]
+            public int?  tastiness { get; set; }
+
+            [Display(Name = "Description:")] 
+            [Required]
             public string description { get; set; }
             // The MySQL DATETIME type can be represented by a DateTime
             public DateTime created_at { get; set; }

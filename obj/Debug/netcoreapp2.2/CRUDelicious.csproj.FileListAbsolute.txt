@@ -28,3 +28,6 @@
 /Users/stevenchung/Documents/coding_dojo/c#_stack/entity/CRUDelicious/obj/Debug/netcoreapp2.2/CRUDelicious.dll
 /Users/stevenchung/Documents/coding_dojo/c#_stack/entity/CRUDelicious/obj/Debug/netcoreapp2.2/CRUDelicious.pdb
 /Users/stevenchung/Documents/coding_dojo/c#_stack/entity/CRUDelicious/obj/Debug/netcoreapp2.2/CRUDelicious.csproj.CopyComplete
+/Users/stevenchung/Documents/coding_dojo/c#_stack/entity/CRUDelicious/obj/Debug/netcoreapp2.2/Razor/Views/Home/New.g.cshtml.cs
+/Users/stevenchung/Documents/coding_dojo/c#_stack/entity/CRUDelicious/obj/Debug/netcoreapp2.2/Razor/Views/Home/Dish.g.cshtml.cs
+/Users/stevenchung/Documents/coding_dojo/c#_stack/entity/CRUDelicious/obj/Debug/netcoreapp2.2/Razor/Views/Home/Edit.g.cshtml.cs

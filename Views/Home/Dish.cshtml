@@ -1,0 +1,27 @@
+@model Dish
+<a asp-action="Index" asp-controller="Home">View All Dishes</a>
+<div>
+    <h1 class="row justify-content-center">@Model.dish_name</h1>
+    <h4 class="row justify-content-center">@Model.chef_name</h4>
+    <hr class="my-4">
+    <br>
+    <p>@Model.description</p>
+</div>
+
+<div class="row">
+    <h6 class="font-weight-bold col-3">Calories: </h6>
+    <p class="col-3">@Model.calories</p>
+</div>
+<div class="row">
+    <h6 class="font-weight-bold col-3">Tastiness: </h6>
+    <p class="col-3">@Model.tastiness</p>
+</div>
+
+<div class="row">
+    <div class="col-2">
+        <a class="btn btn-danger" asp-action="Delete" asp-route-id="@Model.id" asp-controller="Home">Delete Link</a>
+    </div>
+    <div class="col-2">
+        <a class="btn btn-success" asp-action="Edit" asp-route-id="@Model.id" asp-controller="Home">Edit</a>
+    </div>
+</div>

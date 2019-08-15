@@ -3,10 +3,10 @@
 <h1>Welcome to CRUDelicious</h1>
 <div class="row">
     <h5 class="col-5">Check out some recent dishes!</h5>
-    <a class="col-5" href="">Add a Dish</a>
+    <a class="col-5" asp-action="New" asp-controller="Home">Add a Dish</a>
 </div>
 <hr class="my-4">
 @foreach (var dish in @Model)
 {
-    <h3><a href="">@dish.dish_name </a> by @dish.chef_name</h3>
+    <h3><a href="/@dish.id">@dish.dish_name </a> by @dish.chef_name</h3>
 }

@@ -1,0 +1,44 @@
+@model Dish
+
+<a href="/">All Dishes</a>
+<h1 class="row justify-content-center">Edit @Model.dish_name</h1>
+
+<form asp-action="Change" asp-controller="Home" asp-route-id="@Model.id" method="post">
+
+    <span asp-validation-for="chef_name"></span>
+    <br>
+    <label asp-for="chef_name"></label>
+    <input asp-for="chef_name">
+
+    <span asp-validation-for="dish_name"></span>
+    <br>
+    <label asp-for="dish_name"></label>
+    <input asp-for="dish_name">
+
+    <span asp-validation-for="calories"></span>
+    <br>
+    <label asp-for="calories"></label>
+    <input asp-for="calories">
+
+    <span asp-validation-for="tastiness"></span>
+    <br>
+    <label asp-for="tastiness"></label>
+    <select asp-for="tastiness">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select>
+
+    <span asp-validation-for="description"></span>
+    <br>
+    <label asp-for="description"></label>
+    <br>
+    <textarea asp-for="description" cols="25" rows="3"></textarea>
+    <br>
+
+    <button class="btn btn-primary">Edit Dish</button>
+
+</form>
+
