@@ -10,20 +10,23 @@ namespace CRUDelicious.Controllers
 {
     public class HomeController : Controller
     {
+        private MyContext dbContext;
+
+        // Inject context service into the constructor
+        public HomeController(MyContext context)
+        {
+            dbContext = context;
+        }
+
+        [HttpGet("")]
         public IActionResult Index()
         {
-            return View();
+            List<Dish> AllDishes = dbContext.Dishes
+            .OrderByDescending(x => x.created_at)
+            .ToList();
+            
+            return View("Index", AllDishes);
         }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
     }
 }
